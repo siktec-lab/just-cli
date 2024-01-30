@@ -49,10 +49,10 @@ $command
     ->arguments('<dir> [dirs...]')
     // `-h --help`, `-V --version`, `-v --verbosity` options are already added by default.
     // Format: `<name>` for required, `[name]` for optional
-    ->option('-s --with-subdir', 'Also delete subdirs (`with` means false by default)')
+    ->option('-s --with-subdir', 'Also delete sub-dirs (`with` means false by default)')
     ->option('-e,--no-empty', 'Delete empty (`no` means true by default)')
-    // Specify santitizer/callback as 3rd param, default value as 4th param
-    ->option('-d|--depth [nestlevel]', 'How deep to process subdirs', 'intval', 5)
+    // Specify sanitizer/callback as 3rd param, default value as 4th param
+    ->option('-d|--depth [nestlevel]', 'How deep to process sub-dirs', 'intval', 5)
     ->parse(['thisfile.php', '-sev', 'dir', 'dir1', 'dir2', '-vv']) // `$_SERVER['argv']`
 ;
 
@@ -103,8 +103,6 @@ For above example, the output would be:
 
 ### Console app
 
-Definitely check [adhocore/phint](https://github.com/adhocore/phint) - a real world console application made using `adhocore/cli`.
-
 Here we simulate a `git` app with limited functionality of `add`, and `checkout`.
 You will see how intuitive, fluent and cheese building a console app is!
 
@@ -143,7 +141,7 @@ $app
         })
 ;
 
-// Parse only parses input but doesnt invoke action
+// Parse only parses input but doesn't invoke action
 $app->parse(['git', 'add', 'path1', 'path2', 'path3', '-f']);
 
 // Handle will do both parse and invoke action.
@@ -276,7 +274,7 @@ $app->onException(function (Throwable $e, int $exitCode) {
     // optionally, exit with exit code:
     exit($exitCode);
 
-    // or optionally rethrow, a rethrown exception is propagated to top layer caller.
+    // or optionally rethrow, a re-thrown exception is propagated to top layer caller.
     throw $e;
 })->handle($argv);
 ```
@@ -311,9 +309,9 @@ echo $shell->getOutput(); // PHP version string (often with zend/opcache info)
 #### Advanced usage
 
 ```php
-$shell = new JCli\Helper\Shell('php /some/long/running/scipt.php');
+$shell = new JCli\Helper\Shell('php /some/long/running/script.php');
 
-// With async flag, doesnt wait for proc to finish!
+// With async flag, doesn't wait for proc to finish!
 $shell->setOptions($workDir = '/home', $envVars = [])
     ->execute($async = true)
     ->isRunning(); // true
@@ -328,10 +326,10 @@ $shell->kill();
 #### Timeout
 
 ```php
-$shell = new JCli\Helper\Shell('php /some/long/running/scipt.php');
+$shell = new JCli\Helper\Shell('php /some/long/running/script.php');
 
 // Wait for at most 10.5 seconds for proc to finish!
-// If it doesnt complete by then, throws exception
+// If it doesn't complete by then, throws exception
 $shell->setOptions($workDir, $envVars, $timeout = 10.5)->execute();
 
 // And if it completes within timeout, you can access the stdout/stderr
@@ -383,7 +381,7 @@ $interactor->greenBold("Anything is: $any", true);
 ```php
 $nameValidator = function ($value) {
     if (\strlen($value) < 5) {
-        throw new \InvalidArgumentException('Name should be atleast 5 chars');
+        throw new \InvalidArgumentException('Name should be at least 5 chars');
     }
 
     return $value;
@@ -540,7 +538,7 @@ $writer->errorBold('This is error');
 
 You can call methods composed of any combinations:
 `'<colorName>', 'bold', 'bg', 'fg', 'warn', 'info', 'error', 'ok', 'comment'`
-... in any order (eg: `bgRedFgBlaock`, `boldRed`, `greenBold`, `commentBgPurple` and so on ...)
+... in any order (eg: `bgRedFgBlack`, `boldRed`, `greenBold`, `commentBgPurple` and so on ...)
 
 ```php
 $writer->bold->green->write('It is bold green');
@@ -625,14 +623,14 @@ $reader->read('abc', 'trim');
 // (if ENTER is pressed before 5 chars then further read is aborted)
 $reader->read('', 'trim', 5);
 
-// Read but dont echo back the input
+// Read but don't echo back the input
 $reader->readHidden($default, $callback);
 
 // Read from piped stream (or STDIN) if available without waiting
 $reader->readPiped();
 
 // Pass in a callback for if STDIN is empty
-// The callback recieves $reader instance and MUST return string
+// The callback receives $reader instance and MUST return string
 $reader->readPiped(function ($reader) {
     // Wait to read a line!
     return $reader->read();
@@ -706,21 +704,7 @@ appname <tab>            # autocompletes commands               (phint <tab>)
 appname subcommand <tab> # autocompletes options for subcommand (phint init <tab>)
 ```
 
-### Related
-
-- [adhocore/phalcon-ext](https://github.com/adhocore/phalcon-ext) &middot; Phalcon extension using `adhocore/cli`
-- [adhocore/phint](https://github.com/adhocore/phint) &middot; PHP project scaffolding app using `adhocore/cli`
-- [adhocore/type-hinter](https://github.com/adhocore/php-type-hinter) &middot; Auto PHP7 typehinter tool using `adhocore/cli`
-
-### Contributors
+### Original Authors and Contributors:
 
 - [adhocore](https://github.com/adhocore)
 - [sushilgupta](https://github.com/sushilgupta)
-
-## License
-
-> &copy; 2017-2020, [Jitendra Adhikari](https://github.com/adhocore) | [MIT](./LICENSE)
-
-### Credits
-
-This project is release managed by [please](https://github.com/adhocore/please).

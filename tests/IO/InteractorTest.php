@@ -19,8 +19,8 @@ use PHPUnit\Framework\TestCase;
 
 class InteractorTest extends TestCase
 {
-    protected static $in = __DIR__ . '/input';
-    protected static $ou = __DIR__ . '/output';
+    protected static $in = __DIR__ . DIRECTORY_SEPARATOR . 'input';
+    protected static $ou = __DIR__ . DIRECTORY_SEPARATOR . 'output';
 
     public function setUp(): void
     {
