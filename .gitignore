@@ -2,6 +2,7 @@
 /.cache/
 /.env
 /.idea/
+/.vscode/
 /vendor/
 /tools/
 /.vscode/

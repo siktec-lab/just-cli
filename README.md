@@ -1,19 +1,15 @@
-## adhocore/cli
+## Just CLI
+[![Latest Version](https://img.shields.io/github/release/adhocore/php-cli.svg?style=flat-square)](
+
+> [!NOTE]
+> Just CLI is a fork of [adhocore/php-cli](https://github.com/adhocore/phalcon-ext/tree/master/example/cli) which is an amazing CLI framework.
+> This fork is for adding some features that may not be suitable for the original project. Some of the features are:
+> - [x] Negative numbers in arguments.
+> - [x] Support for multiple variadic arguments with a grouping option (e.g. `$ app cmd [arg11 arg12] --opt [val1 val2]` )
+> - [ ] Add support for a `structured` CLI app that will auto register commands, views, layouts, etc.
+> - [ ] Add support for Themes.
 
 Framework agnostic Command Line Interface utilities and helpers for PHP. Build Console App with ease, fun and love.
-
-[![Latest Version](https://img.shields.io/github/release/adhocore/php-cli.svg?style=flat-square)](https://github.com/adhocore/php-cli/releases)
-[![Build](https://github.com/adhocore/php-cli/actions/workflows/build.yml/badge.svg)](https://github.com/adhocore/php-cli/actions/workflows/build.yml)
-[![Scrutinizer CI](https://img.shields.io/scrutinizer/g/adhocore/php-cli.svg?style=flat-square)](https://scrutinizer-ci.com/g/adhocore/php-cli/?branch=main)
-[![Codecov branch](https://img.shields.io/codecov/c/github/adhocore/php-cli/main.svg?style=flat-square)](https://codecov.io/gh/adhocore/php-cli)
-[![StyleCI](https://styleci.io/repos/139012552/shield)](https://styleci.io/repos/139012552)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Framework+agnostic+Command+Line+Interface+utilities+and+helpers+for+PHP&url=https://github.com/adhocore/php-cli&hashtags=php,cli,cliapp,console)
-[![Support](https://img.shields.io/static/v1?label=Support&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/adhocore)
-<!-- [![Donate 15](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&label=donate+15)](https://www.paypal.me/ji10/15usd)
-[![Donate 25](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&label=donate+25)](https://www.paypal.me/ji10/25usd)
-[![Donate 50](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&label=donate+50)](https://www.paypal.me/ji10/50usd) -->
-
 
 - Command line application made easy
 - Inspired by nodejs [commander](https://github.com/tj/commander.js) (thanks tj)
