@@ -10,12 +10,10 @@
 
 Framework agnostic Command Line Interface utilities and helpers for PHP. Build Console App with ease, fun and love.
 
-- Command line application made easy
-- Inspired by nodejs [commander](https://github.com/tj/commander.js) (thanks tj)
 - Zero dependency.
-- For PHP7, PHP8 and for good
+- For PHP 8.0+ only.
 
-[![Screen Preview](https://i.imgur.com/qIYg9Zn.gif "Preview from adhocore/phalcon-ext which uses this cli package")](https://github.com/adhocore/phalcon-ext/tree/master/example/cli)
+![Screen Preview](https://i.imgur.com/qIYg9Zn.gif "Preview from adhocore/phalcon-ext which uses this cli package")
 
 #### What's included
 
@@ -27,11 +25,7 @@ Framework agnostic Command Line Interface utilities and helpers for PHP. Build C
 
 ## Installation
 ```bash
-# PHP8.0 and above v1.0.0
-composer require adhocore/cli:^v1.0.0
-
-# PHP 7.x
-composer require adhocore/cli:^v0.9.0
+composer require siktec/just-Cli
 ```
 
 ## Usage
@@ -648,27 +642,27 @@ Whenever an exception is caught by `Application::handle()`, it will show a beaut
 
 ### Autocompletion
 
-Any console applications that are built on top of **adhocore/cli** can entertain autocomplete of commands and options in zsh shell with oh-my-zsh.
+Any console applications that are built on top of **siktec/just-cli** can entertain autocomplete of commands and options in zsh shell with oh-my-zsh.
 
-All you have to do is add one line to the end of `~/.oh-my-zsh/custom/plugins/ahccli/ahccli.plugin.zsh`:
+All you have to do is add one line to the end of `~/.oh-my-zsh/custom/plugins/ahccli/jcli.plugin.zsh`:
 
-> `compdef _ahccli <appname>`
+> `compdef _jcli <appname>`
 
-Example: `compdef _ahccli phint` for [phint](https://github.com/adhocore/phint).
+Example: `compdef _jcli your-cli-app` for your cli app named `your-cli-app`
 
 That is cumbersome to perform manually, here's a complete command you can copy/paste/run:
 
 #### One time setup
 
 ```sh
-mkdir -p ~/.oh-my-zsh/custom/plugins/ahccli && cd ~/.oh-my-zsh/custom/plugins/ahccli
+mkdir -p ~/.oh-my-zsh/custom/plugins/jcli && cd ~/.oh-my-zsh/custom/plugins/jcli
 
-[ -f ./ahccli.plugin.zsh ] || curl -sSLo ./ahccli.plugin.zsh https://raw.githubusercontent.com/adhocore/php-cli/master/ahccli.plugin.zsh
+[ -f ./jcli.plugin.zsh ] || curl -sSLo ./jcli.plugin.zsh https://raw.githubusercontent.com/siktec-lab/just-cli/master/jcli.plugin.zsh
 
-chmod 760 ./ahccli.plugin.zsh && cd -
+chmod 760 ./jcli.plugin.zsh && cd -
 ```
 
-##### Load ahccli plugin
+##### Load JCli plugin
 
 > This is also one time setup.
 
@@ -676,8 +670,8 @@ chmod 760 ./ahccli.plugin.zsh && cd -
 # Open .zshrc
 nano ~/.zshrc
 
-# locate plugins=(... ...) and add ahccli
-plugins=(git ... ... ahccli)
+# locate plugins=(... ...) and add jcli
+plugins=(git ... ... jcli)
 
 # ... then save it (Ctrl + O)
 ```
@@ -686,7 +680,7 @@ plugins=(git ... ... ahccli)
 
 ```sh
 # replace appname with real name eg: phint
-echo compdef _ahccli appname >> ~/.oh-my-zsh/custom/plugins/ahccli/ahccli.plugin.zsh
+echo compdef _jcli appname >> ~/.oh-my-zsh/custom/plugins/jcli/jcli.plugin.zsh
 ```
 
 > Of course you can add multiple apps, just change appname in above command
@@ -694,14 +688,14 @@ echo compdef _ahccli appname >> ~/.oh-my-zsh/custom/plugins/ahccli/ahccli.plugin
 Then either restart the shell or source the plugin like so:
 
 ```sh
-source ~/.oh-my-zsh/custom/plugins/ahccli/ahccli.plugin.zsh
+source ~/.oh-my-zsh/custom/plugins/jcli/jcli.plugin.zsh
 ```
 
 #### Trigger autocomplete
 
 ```sh
-appname <tab>            # autocompletes commands               (phint <tab>)
-appname subcommand <tab> # autocompletes options for subcommand (phint init <tab>)
+appname <tab>            # autocompletes commands 
+appname subcommand <tab> # autocompletes options for subcommand
 ```
 
 ### Original Authors and Contributors:
