@@ -9,11 +9,11 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Helper;
+namespace JCli\Test\Helper;
 
-use Ahc\Cli\Input\Reader;
-use Ahc\Cli\IO\Interactor;
-use Ahc\Cli\Output\Writer;
+use JCli\Input\Reader;
+use JCli\IO\Interactor;
+use JCli\Output\Writer;
 use Exception;
 use PHPUnit\Framework\TestCase;
 

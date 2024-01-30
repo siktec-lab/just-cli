@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Helper;
+namespace JCli\Helper;
 
 use function array_map;
 use function array_search;

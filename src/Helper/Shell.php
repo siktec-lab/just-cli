@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Helper;
+namespace JCli\Helper;
 
-use Ahc\Cli\Exception\RuntimeException;
+use JCli\Exception\RuntimeException;
 
 use function fclose;
 use function function_exists;

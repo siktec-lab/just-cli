@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Input;
+namespace JCli\Test\Input;
 
-use Ahc\Cli\Input\Option;
+use JCli\Input\Option;
 use PHPUnit\Framework\TestCase;
 
 class OptionTest extends TestCase

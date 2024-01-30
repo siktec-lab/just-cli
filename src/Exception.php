@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli;
+namespace JCli;
 
 use Throwable;
 

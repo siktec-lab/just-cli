@@ -9,11 +9,11 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test;
+namespace JCli\Test;
 
-use Ahc\Cli\Application;
-use Ahc\Cli\Input\Command;
-use Ahc\Cli\IO\Interactor;
+use JCli\Application;
+use JCli\Input\Command;
+use JCli\IO\Interactor;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Throwable;

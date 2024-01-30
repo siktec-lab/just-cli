@@ -9,12 +9,12 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Input;
+namespace JCli\Test\Input;
 
-use Ahc\Cli\Input\Command;
+use JCli\Input\Command;
 use PHPUnit\Framework\TestCase;
-use Ahc\Cli\Exception\InvalidArgumentException;
-use Ahc\Cli\Exception\InvalidParameterException;
+use JCli\Exception\InvalidArgumentException;
+use JCli\Exception\InvalidParameterException;
 
 use function debug_backtrace;
 use function ob_start;

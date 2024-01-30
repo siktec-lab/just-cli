@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Input;
+namespace JCli\Test\Input;
 
-use Ahc\Cli\Input\Argument;
+use JCli\Input\Argument;
 use PHPUnit\Framework\TestCase;
 
 class ArgumentTest extends TestCase

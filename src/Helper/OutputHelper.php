@@ -9,14 +9,14 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Helper;
+namespace JCli\Helper;
 
-use Ahc\Cli\Exception;
-use Ahc\Cli\Input\Argument;
-use Ahc\Cli\Input\Command;
-use Ahc\Cli\Input\Option;
-use Ahc\Cli\Input\Parameter;
-use Ahc\Cli\Output\Writer;
+use JCli\Exception;
+use JCli\Input\Argument;
+use JCli\Input\Command;
+use JCli\Input\Option;
+use JCli\Input\Parameter;
+use JCli\Output\Writer;
 use Throwable;
 
 use function array_map;

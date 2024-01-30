@@ -9,13 +9,13 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
-use Ahc\Cli\Helper\Normalizer;
-use Ahc\Cli\Input\Tokenizer;
-use Ahc\Cli\Exception\InvalidParameterException;
-use Ahc\Cli\Exception\InvalidArgumentException;
-use Ahc\Cli\Exception\RuntimeException;
+use JCli\Helper\Normalizer;
+use JCli\Input\Tokenizer;
+use JCli\Exception\InvalidParameterException;
+use JCli\Exception\InvalidArgumentException;
+use JCli\Exception\RuntimeException;
 
 use function array_diff_key;
 use function array_filter;

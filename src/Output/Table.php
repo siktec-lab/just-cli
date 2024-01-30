@@ -9,10 +9,10 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Output;
+namespace JCli\Output;
 
-use Ahc\Cli\Exception\InvalidArgumentException;
-use Ahc\Cli\Helper\InflectsString;
+use JCli\Exception\InvalidArgumentException;
+use JCli\Helper\InflectsString;
 
 use function array_column;
 use function array_fill_keys;

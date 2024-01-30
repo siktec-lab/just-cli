@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Helper;
+namespace JCli\Helper;
 
 use function lcfirst;
 use function str_replace;

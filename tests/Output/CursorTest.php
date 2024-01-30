@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Output;
+namespace JCli\Test\Output;
 
-use Ahc\Cli\Output\Cursor;
+use JCli\Output\Cursor;
 use PHPUnit\Framework\TestCase;
 
 class CursorTest extends TestCase

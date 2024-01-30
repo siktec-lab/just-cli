@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
-use Ahc\Cli\Input\Option;
+use JCli\Input\Option;
 
 use function array_map;
 use function is_null;

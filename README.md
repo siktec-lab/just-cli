@@ -1,5 +1,4 @@
 ## Just CLI
-[![Latest Version](https://img.shields.io/github/release/adhocore/php-cli.svg?style=flat-square)](
 
 > [!NOTE]
 > Just CLI is a fork of [adhocore/php-cli](https://github.com/adhocore/phalcon-ext/tree/master/example/cli) which is an amazing CLI framework.
@@ -40,7 +39,7 @@ composer require adhocore/cli:^v0.9.0
 ### Argv parser
 
 ```php
-$command = new Ahc\Cli\Input\Command('rmdir', 'Remove dirs');
+$command = new JCli\Input\Command('rmdir', 'Remove dirs');
 
 $command
     ->version('0.0.1-dev')
@@ -112,7 +111,7 @@ You will see how intuitive, fluent and cheese building a console app is!
 #### Git app
 
 ```php
-$app = new Ahc\Cli\Application('git', '0.0.1');
+$app = new JCli\Application('git', '0.0.1');
 
 $app
     // Register `add` command
@@ -160,7 +159,7 @@ $app->handle(['git', 'co', '-b', 'master-2', '-f']);
 Instead of inline commands/actions, we define and add our own commands (having `interact()` and `execute()`) to the app:
 
 ```php
-class InitCommand extends Ahc\Cli\Input\Command
+class InitCommand extends JCli\Input\Command
 {
     public function __construct()
     {
@@ -181,7 +180,7 @@ class InitCommand extends Ahc\Cli\Input\Command
     }
 
     // This method is auto called before `self::execute()` and receives `Interactor $io` instance
-    public function interact(Ahc\Cli\IO\Interactor $io) : void
+    public function interact(JCli\IO\Interactor $io) : void
     {
         // Collect missing opts/args
         if (!$this->apple) {
@@ -210,7 +209,7 @@ class InitCommand extends Ahc\Cli\Input\Command
     }
 }
 
-class OtherCommand extends Ahc\Cli\Input\Command
+class OtherCommand extends JCli\Input\Command
 {
     public function __construct()
     {
@@ -230,7 +229,7 @@ class OtherCommand extends Ahc\Cli\Input\Command
 }
 
 // Init App with name and version
-$app = new Ahc\Cli\Application('App', 'v0.0.1');
+$app = new JCli\Application('App', 'v0.0.1');
 
 // Add commands with optional aliases`
 $app->add(new InitCommand, 'i');
@@ -268,7 +267,7 @@ $app->add((new ConfigListCommand)->inGroup('Config'));
 Set a custom exception handler as callback. The callback receives exception & exit code. The callback may rethrow exception or may exit the program or just log exception and do nothing else.
 
 ```php
-$app = new Ahc\Cli\Application('App', 'v0.0.1');
+$app = new JCli\Application('App', 'v0.0.1');
 $app->add(...);
 $app->onException(function (Throwable $e, int $exitCode) {
     // send to sentry
@@ -301,7 +300,7 @@ Very thin shell wrapper that provides convenience methods around `proc_open()`.
 #### Basic usage
 
 ```php
-$shell = new Ahc\Cli\Helper\Shell($command = 'php -v', $rawInput = null);
+$shell = new JCli\Helper\Shell($command = 'php -v', $rawInput = null);
 
 // Waits until proc finishes
 $shell->execute($async = false); // default false
@@ -312,7 +311,7 @@ echo $shell->getOutput(); // PHP version string (often with zend/opcache info)
 #### Advanced usage
 
 ```php
-$shell = new Ahc\Cli\Helper\Shell('php /some/long/running/scipt.php');
+$shell = new JCli\Helper\Shell('php /some/long/running/scipt.php');
 
 // With async flag, doesnt wait for proc to finish!
 $shell->setOptions($workDir = '/home', $envVars = [])
@@ -329,7 +328,7 @@ $shell->kill();
 #### Timeout
 
 ```php
-$shell = new Ahc\Cli\Helper\Shell('php /some/long/running/scipt.php');
+$shell = new JCli\Helper\Shell('php /some/long/running/scipt.php');
 
 // Wait for at most 10.5 seconds for proc to finish!
 // If it doesnt complete by then, throws exception
@@ -342,13 +341,13 @@ echo $shell->getErrorOutput();
 
 ### Cli Interaction
 
-You can perform user interaction like printing colored output, reading user input programatically and  moving the cursors around with provided `Ahc\Cli\IO\Interactor`.
+You can perform user interaction like printing colored output, reading user input programatically and  moving the cursors around with provided `JCli\IO\Interactor`.
 
 ```php
-$interactor = new Ahc\Cli\IO\Interactor;
+$interactor = new JCli\IO\Interactor;
 
 // For mocking io:
-$interactor = new Ahc\Cli\IO\Interactor($inputPath, $outputPath);
+$interactor = new JCli\IO\Interactor($inputPath, $outputPath);
 ```
 
 #### Confirm
@@ -415,14 +414,14 @@ $pass = $interactor->promptHidden('Password', $passValidator, 2);
 
 ## IO Components
 
-The interactor is composed of `Ahc\Cli\Input\Reader` and `Ahc\Cli\Output\Writer` while the `Writer` itself is composed of `Ahc\Cli\Output\Color`. All these components can be used standalone.
+The interactor is composed of `JCli\Input\Reader` and `JCli\Output\Writer` while the `Writer` itself is composed of `JCli\Output\Color`. All these components can be used standalone.
 
 ### Color
 
 Color looks cool!
 
 ```php
-$color = new Ahc\Cli\Output\Color;
+$color = new JCli\Output\Color;
 ```
 
 #### Simple usage
@@ -437,9 +436,9 @@ echo $color->ok('This is ok msg');
 
 #### Custom style
 ```php
-Ahc\Cli\Output\Color::style('mystyle', [
-    'bg' => Ahc\Cli\Output\Color::CYAN,
-    'fg' => Ahc\Cli\Output\Color::WHITE,
+JCli\Output\Color::style('mystyle', [
+    'bg' => JCli\Output\Color::CYAN,
+    'fg' => JCli\Output\Color::WHITE,
     'bold' => 1, // You can experiment with 0, 1, 2, 3 ... as well
 ]);
 
@@ -451,7 +450,7 @@ echo $color->mystyle('My text');
 Move cursor around, erase line up or down, clear screen.
 
 ```php
-$cursor = new Ahc\Cli\Output\Cursor;
+$cursor = new JCli\Output\Cursor;
 
 echo  $cursor->up(1)
     . $cursor->down(2)
@@ -471,7 +470,7 @@ echo  $cursor->up(1)
 Easily add a progress bar to your output:
 
 ```php
-$progress = new Ahc\Cli\Output\ProgressBar(100);
+$progress = new JCli\Output\ProgressBar(100);
 for ($i = 0; $i <= 100; $i++) {
     $progress->current($i);
 
@@ -483,7 +482,7 @@ for ($i = 0; $i <= 100; $i++) {
 You can also manually advance the bar:
 
 ```php
-$progress = new Ahc\Cli\Output\ProgressBar(100);
+$progress = new JCli\Output\ProgressBar(100);
 
 // Do something
 
@@ -501,7 +500,7 @@ $progress->advance(5, 'Still going.'); // Adds 5, displays a label
 You can override the progress bar options to customize it to your liking:
 
 ```php
-$progress = new Ahc\Cli\Output\ProgressBar(100);
+$progress = new JCli\Output\ProgressBar(100);
 $progress->option('pointer', '>>');
 $progress->option('loader', '▩');
 
@@ -530,7 +529,7 @@ $progress->option([
 Write anything in style.
 
 ```php
-$writer = new Ahc\Cli\Output\Writer;
+$writer = new JCli\Output\Writer;
 
 // All writes are forwarded to STDOUT
 // But if you specify error, then to STDERR
@@ -614,7 +613,7 @@ $writer->table([
 Read and pre process user input.
 
 ```php
-$reader = new Ahc\Cli\Input\Reader;
+$reader = new JCli\Input\Reader;
 
 // No default, callback fn `ucwords()`
 $reader->read(null, 'ucwords');

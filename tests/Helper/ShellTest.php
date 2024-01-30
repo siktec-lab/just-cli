@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Helper;
+namespace JCli\Test\Helper;
 
-use Ahc\Cli\Helper\Shell;
+use JCli\Helper\Shell;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 use Throwable;

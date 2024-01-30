@@ -9,10 +9,10 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Helper;
+namespace JCli\Helper;
 
-use Ahc\Cli\Input\Option;
-use Ahc\Cli\Input\Parameter;
+use JCli\Input\Option;
+use JCli\Input\Parameter;
 
 /**
  * Internal value &/or argument normalizer. Has little to no usefulness as public api.

@@ -9,14 +9,14 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Helper;
+namespace JCli\Test\Helper;
 
-use Ahc\Cli\Helper\OutputHelper;
-use Ahc\Cli\Input\Argument;
-use Ahc\Cli\Input\Command;
-use Ahc\Cli\Input\Option;
-use Ahc\Cli\Output\Color;
-use Ahc\Cli\Output\Writer;
+use JCli\Helper\OutputHelper;
+use JCli\Input\Argument;
+use JCli\Input\Command;
+use JCli\Input\Option;
+use JCli\Output\Color;
+use JCli\Output\Writer;
 use DateTime;
 use PHPUnit\Framework\TestCase;
 

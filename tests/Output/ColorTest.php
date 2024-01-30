@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Output;
+namespace JCli\Test\Output;
 
-use Ahc\Cli\Output\Color;
+use JCli\Output\Color;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

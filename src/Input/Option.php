@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
 use function preg_match;
 use function preg_split;

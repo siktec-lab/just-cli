@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Output;
+namespace JCli\Output;
 
 use function fopen;
 use function fwrite;

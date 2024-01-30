@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
 use function explode;
 use function is_array;

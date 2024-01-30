@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Input;
+namespace JCli\Test\Input;
 
-use Ahc\Cli\Input\Reader;
+use JCli\Input\Reader;
 use PHPUnit\Framework\TestCase;
 
 use function ucwords;

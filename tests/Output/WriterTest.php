@@ -9,11 +9,11 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Output;
+namespace JCli\Test\Output;
 
-use Ahc\Cli\Output\Color;
-use Ahc\Cli\Output\Writer;
-use Ahc\Cli\Test\CliTestCase;
+use JCli\Output\Color;
+use JCli\Output\Writer;
+use JCli\Test\CliTestCase;
 use InvalidArgumentException;
 
 use function substr_count;

@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
-use Ahc\Cli\Input\Token;
+use JCli\Input\Token;
 use \Iterator;
 
 use function explode;

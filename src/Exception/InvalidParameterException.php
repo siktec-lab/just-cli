@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Exception;
+namespace JCli\Exception;
 
 class InvalidParameterException extends InvalidArgumentException
 {

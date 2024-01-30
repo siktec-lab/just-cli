@@ -9,11 +9,11 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Input;
+namespace JCli\Test\Input;
 
-use Ahc\Cli\Application;
-use Ahc\Cli\Input\Command;
-use Ahc\Cli\Output\ProgressBar;
+use JCli\Application;
+use JCli\Input\Command;
+use JCli\Output\ProgressBar;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;

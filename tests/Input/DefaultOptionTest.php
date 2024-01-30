@@ -9,10 +9,10 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Input;
+namespace JCli\Test\Input;
 
-use Ahc\Cli\Input\Command;
-use Ahc\Cli\Test\CliTestCase;
+use JCli\Input\Command;
+use JCli\Test\CliTestCase;
 
 class DefaultOptionTest extends CliTestCase
 {

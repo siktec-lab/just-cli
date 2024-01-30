@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Output;
+namespace JCli\Output;
 
-use Ahc\Cli\Helper\Terminal;
+use JCli\Helper\Terminal;
 use UnexpectedValueException;
 
 use function count;

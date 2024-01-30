@@ -9,7 +9,7 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test;
+namespace JCli\Test;
 
 use php_user_filter;
 use PHPUnit\Framework\TestCase;

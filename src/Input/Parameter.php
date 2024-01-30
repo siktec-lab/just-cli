@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
-use Ahc\Cli\Helper\InflectsString;
+use JCli\Helper\InflectsString;
 
 use function json_encode;
 use function ltrim;

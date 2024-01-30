@@ -9,12 +9,12 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Output;
+namespace JCli\Test\Output;
 
-use Ahc\Cli\Helper\Terminal;
-use Ahc\Cli\Output\ProgressBar;
-use Ahc\Cli\Output\Writer;
-use Ahc\Cli\Test\CliTestCase;
+use JCli\Helper\Terminal;
+use JCli\Output\ProgressBar;
+use JCli\Output\Writer;
+use JCli\Test\CliTestCase;
 use ArrayIterator;
 use IteratorAggregate;
 use Traversable;

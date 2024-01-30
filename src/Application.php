@@ -9,12 +9,12 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli;
+namespace JCli;
 
-use Ahc\Cli\Exception\InvalidArgumentException;
-use Ahc\Cli\Helper\OutputHelper;
-use Ahc\Cli\Input\Command;
-use Ahc\Cli\IO\Interactor;
+use JCli\Exception\InvalidArgumentException;
+use JCli\Helper\OutputHelper;
+use JCli\Input\Command;
+use JCli\IO\Interactor;
 use ReflectionClass;
 use ReflectionFunction;
 use Throwable;

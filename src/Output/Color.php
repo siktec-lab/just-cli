@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Output;
+namespace JCli\Output;
 
-use Ahc\Cli\Exception\InvalidArgumentException;
+use JCli\Exception\InvalidArgumentException;
 
 use function array_intersect_key;
 use function constant;

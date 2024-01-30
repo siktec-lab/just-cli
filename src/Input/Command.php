@@ -9,15 +9,15 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Input;
+namespace JCli\Input;
 
-use Ahc\Cli\Application as App;
-use Ahc\Cli\Exception\RuntimeException;
-use Ahc\Cli\Helper\InflectsString;
-use Ahc\Cli\Helper\OutputHelper;
-use Ahc\Cli\IO\Interactor;
-use Ahc\Cli\Output\ProgressBar;
-use Ahc\Cli\Output\Writer;
+use JCli\Application as App;
+use JCli\Exception\RuntimeException;
+use JCli\Helper\InflectsString;
+use JCli\Helper\OutputHelper;
+use JCli\IO\Interactor;
+use JCli\Output\ProgressBar;
+use JCli\Output\Writer;
 use Closure;
 
 use function array_filter;

@@ -9,10 +9,10 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\IO;
+namespace JCli\IO;
 
-use Ahc\Cli\Input\Reader;
-use Ahc\Cli\Output\Writer;
+use JCli\Input\Reader;
+use JCli\Output\Writer;
 use Throwable;
 
 use function array_keys;

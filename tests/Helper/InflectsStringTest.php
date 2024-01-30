@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Test\Helper;
+namespace JCli\Test\Helper;
 
-use Ahc\Cli\Helper\InflectsString;
+use JCli\Helper\InflectsString;
 use PHPUnit\Framework\TestCase;
 
 class InflectsStringTest extends TestCase

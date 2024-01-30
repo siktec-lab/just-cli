@@ -9,9 +9,9 @@
  * Licensed under MIT license.
  */
 
-namespace Ahc\Cli\Exception;
+namespace JCli\Exception;
 
-use Ahc\Cli\Exception;
+use JCli\Exception;
 
 class InvalidArgumentException extends \InvalidArgumentException implements Exception
 {
